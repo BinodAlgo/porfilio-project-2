@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+
+/* Color Variables */
+:root {
+  --primary-color: #61e697;
+  --pure-color: #ffffff;
+  --dark-color: #040441;
+  --accent-color: #ff4a81;
+  --secondary-color: #fb7b33;
+  --bg-gradient: radial-gradient(
+    circle,
+    rgba(251, 87, 123, 1) 38%,
+    rgba(238, 159, 40, 1) 100%
+  );
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 17px;
+  overflow-x: hidden;
+}
+
+
+.active{
+  color:var(--accent-color);
+}
+
+.header-container {
+  background-color: hsla(240, 50%, 21%, 1);
+  clip-path: polygon(100% 0, 100% 100%, 79% 81%, 0 99%, 0 0);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem; /* 1rem = 16px */
+  padding: 1.2rem;
+}
+
+.navbar--brand  a{
+  text-decoration: none;
+  font-size: 25px;
+  margin-left: 10px;
+  color: var(--accent-color);
+  cursor:pointer
+}
+
+.navbar .navbar--links ul {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.navbar--links a {
+  color: var(--pure-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar--contact button.navbar--contact_btn {
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  /* background-color: var(--bg-gradient); */
+  border: none;
+  outline: none;
+  width: 162px;
+  height: 43px;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.navbar--links a:hover {
+  color: var(--accent-color);
+}
+
+
+.header--hero {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header--left .header--hero_image img {
+  width: 419px;
+  height: 595px;
+  border-radius: 30%;
+  display: block;
+  margin-top: -40px;
+}
+
+.header-right .header--hero_text {
+  color: var(--pure-color);
+}
+
+.header-right span {
+  font-size: 36px;
+}
+
+.header-right h2 {
+  font-size: 64px;
+  line-height: 96px;
+}
+
+.text-green {
+  color: var(--primary-color);
+  font-size: 64px;
+  line-height: 96px;
+}
+
+.header--hero_cvbtn a {
+  width: 210.98px;
+  height: 56px;
+  text-align: center;
+  margin-top: 10px;
+  display: block;
+  background-color:transparent;
+  text-decoration: none;
+  color:var(--primary-color);
+  border: 1px solid #61E697;
+  padding:.8rem;
+  transition: all 0.4s ease-in-out;
+}
+
+#btn-contact{
+  width:210.98px;
+  height:56px;
+}
+#btn-contact a{
+  display: block;
+  text-align: center;
+  /* margin-top: 10px; */
+  text-align: center;
+   padding:1rem;
+   text-decoration: none;
+  background-image: var(--bg-gradient);
+  color:var(--pure-color);
+  transition: all .4s ease-out;
+
+}
+
+#btn-contact a:hover{
+  background-image:none;
+  background-color:var(--dark-color);
+  color:var(--pure-color);
+} 
+.header--hero_cvbtn a:hover{
+  background-color: var(--primary-color);
+  color:var(--dark-color);
+}
