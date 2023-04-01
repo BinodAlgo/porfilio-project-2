@@ -444,7 +444,7 @@ height: 575px; */
 
 /* Contact Me Section Styling */
 .contact{
-  background:var(--light-dark-color);
+  background:var(--dark-color);
   width:100vw;
   height:90vh;
   /* margin-bottom:1rem; */
