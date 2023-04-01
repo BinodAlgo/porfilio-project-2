@@ -2,9 +2,10 @@
 
 /* Color Variables */
 :root {
-  --primary-color: #61e697;
+  --primary-color: #37bc6c;
   --pure-color: #ffffff;
   --dark-color: #040441;
+  --light-dark-color: #284353;
   --accent-color: #ff4a81;
   --secondary-color: #fb7b33;
   --bg-gradient: radial-gradient(
@@ -14,10 +15,9 @@
   );
 }
 
-
-::selection{
+::selection {
   background-color: var(--dark-color);
-  color:var(--pure-color);
+  color: var(--pure-color);
 }
 *,
 *::after,
@@ -31,16 +31,16 @@ html {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 17px;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-
-.active{
-  color:var(--accent-color);
+.active {
+  color: var(--accent-color);
 }
 
 .header-container {
   background-color: hsla(240, 50%, 21%, 1);
-clip-path: polygon(100% 0, 100% 100%, 80% 90%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 100%, 80% 90%, 0 100%, 0 0);
 }
 
 .navbar {
@@ -51,12 +51,12 @@ clip-path: polygon(100% 0, 100% 100%, 80% 90%, 0 100%, 0 0);
   padding: 1.2rem;
 }
 
-.navbar--brand  a{
+.navbar--brand a {
   text-decoration: none;
   font-size: 25px;
   margin-left: 10px;
   color: var(--accent-color);
-  cursor:pointer
+  cursor: pointer;
 }
 
 .navbar .navbar--links ul {
@@ -70,16 +70,16 @@ clip-path: polygon(100% 0, 100% 100%, 80% 90%, 0 100%, 0 0);
 .navbar--links a {
   color: var(--pure-color);
   text-decoration: none;
-  padding:.4rem;
+  padding: 0.4rem;
   text-transform: uppercase;
   transition: all 0.5s ease-in-out;
 }
 
 .navbar--links a:hover {
   color: var(--dark-color);
-  padding:.7rem;
+  padding: 0.7rem;
   text-decoration: 2px underline var(--accent-color);
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
 }
 .navbar--contact button.navbar--contact_btn {
   text-transform: uppercase;
@@ -93,8 +93,6 @@ clip-path: polygon(100% 0, 100% 100%, 80% 90%, 0 100%, 0 0);
   cursor: pointer;
 }
 
-
-
 .header--hero {
   padding: 3rem;
   display: flex;
@@ -103,9 +101,9 @@ clip-path: polygon(100% 0, 100% 100%, 80% 90%, 0 100%, 0 0);
 }
 
 .header--left .header--hero_image img {
-  max-width:100%;
-  object-fit:cover;
-  height:auto;
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
   border-radius: 30%;
   display: block;
   margin-top: -40px;
@@ -115,9 +113,8 @@ clip-path: polygon(100% 0, 100% 100%, 80% 90%, 0 100%, 0 0);
   color: var(--pure-color);
 }
 
-
-.header--hero-title{
- font-size: 36px;
+.header--hero-title {
+  font-size: 36px;
 }
 
 .header-right h2 {
@@ -137,101 +134,181 @@ clip-path: polygon(100% 0, 100% 100%, 80% 90%, 0 100%, 0 0);
   text-align: center;
   margin-top: 10px;
   display: block;
-  background-color:transparent;
+  background-color: transparent;
   text-decoration: none;
-  color:var(--primary-color);
-  border: 1px solid #61E697;
-  padding:.8rem;
+  color: var(--primary-color);
+  border: 1px solid #61e697;
+  padding: 0.8rem;
   transition: all 0.4s ease-in-out;
 }
 
-#btn-contact{
-  width:210.98px;
-  height:56px;
+#btn-contact {
+  width: 210.98px;
+  height: 56px;
 }
-#btn-contact a{
+#btn-contact a {
   display: block;
   text-align: center;
   text-align: center;
-   padding:1rem;
-   text-decoration: none;
-  background: var(--secondary-color);
-  color:var(--pure-color);
-  transition: all .4s ease-out;
-
+  padding: 1rem;
+  text-decoration: none;
+  background: var(--primary-color);
+  color: var(--pure-color);
+  transition: all 0.4s ease-out;
 }
 
-#btn-contact a:hover{
-  background-image:none;
-  background-color:var(--dark-color);
-  color:var(--pure-color);
-} 
-.header--hero_cvbtn a:hover{
+#btn-contact a:hover {
+  background-image: none;
+  background-color: var(--secondary-color);
+  color: var(--pure-color);
+}
+.header--hero_cvbtn a:hover {
   background-color: var(--primary-color);
-  color:var(--dark-color);
+  color: var(--dark-color);
 }
-
 
 /* Styling About Me Section */
-.about{
-  background:var(--pure-color);
-  display:flex;
-  align-items:center;
+.about {
+  background: var(--pure-color);
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap:3rem;
+  gap: 3rem;
+  padding:1.3rem;
 }
 
-
-.about--image{
-  flex:2;
-
+.about--image {
+  flex: 2;
+  margin-bottom: 2rem;
 }
 
-.about--image img{
+.about--image img {
   /* height:auto; */
-display: block;
-/* width: 405px;
+  display: block;
+  /* width: 405px;
 height: 575px; */
-max-width: 100%;
-height: auto;
-object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 40%;
 
-/* margin-right:3rem; */
-margin-left:5rem;
+  /* margin-right:3rem; */
+  margin-left: 5rem;
 }
 
-.about .about--text{
-  flex:1.5;
+.about .about--text {
+  flex: 1.5;
   /* margin-left:1rem; */
 }
-.about--text .about--text_title{
-  font-size:64px;
-  font-weight:900;
+.about--text .about--text_title {
+  font-size: 64px;
+  font-weight: 900;
 }
 
-.about--text .about--text_content{
-  width:70%;
-  font-size:18px;
+.about--text .about--text_content {
+  width: 70%;
+  font-size: 18px;
   font-weight: 700;
   text-align: left;
-  line-height:24px;
+  line-height: 24px;
 }
 
-
-
-.about--social_icons{
-  display:flex;
-  gap:.5rem;
-  margin-top:10px;
+.about--social_icons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 10px;
   justify-content: flex-start;
   align-items: center;
 }
-.about--social_icons  img{
-  width:23px;
-  height:21.5px;
+.about--social_icons img {
+  width: 23px;
+  height: 21.5px;
+}
+
+/* Stlying My Skills Section */
+.skills {
+  padding-top:1rem;
+  background-color: var(--light-dark-color);
+  color: var(--pure-color);
+  clip-path: polygon(80% 7%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+.skills--title{
+  margin-top:2rem;
+  margin-bottom: 2rem;
+}
+.skills--title .title {
+  font-size: 64px;
+  color: var(--pure-color);
+  text-align: center;
+}
+.skills--title .subtitle {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 3rem;
+}
+
+.skills--cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+.skills--card {
+  /* margin-top:1.4rem; */
+  margin: 1.4rem 0;
+  position: relative;
+  width: 402px;
+  height: 314px;
+  color: var(--dark-color);
+  background-color: var(--pure-color);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 2rem;
+  transition: all .4s ease-in-out;
+}
+
+.skills--card_title {
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  font-weight: 800;
+}
+.skills--card_description {
+  font-size: 16px;
+  margin-top: 1.5rem;
+  text-align: left;
+  line-height: 25px;
+}
+
+.skills--card_image {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin-top: 1.3rem;
+}
+.skills--card_image img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.skills--card:hover{
+  background-color: var(--secondary-color);
+  color:var(--pure-color);
+  /* box-shadow: 10px 0 20px rgba(0,0,0,0.3); */
+  /* filter: blur(1px); */
 }
 
 
 
-/* Stlying My Skills Section */
-
+/* My  */
