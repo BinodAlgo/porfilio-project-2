@@ -28,11 +28,12 @@
   box-sizing: border-box;
 }
 
-html {
+html,body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 17px;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  resize:none;
 }
 
 .active {
@@ -389,8 +390,9 @@ height: 575px; */
 .blog__article{
   background:var(--pure-color);
   color:var(--dark-color);
-  width:33.33%;
+  /* width:33.33%; */
   height:40%;
+  flex:33.33%;
   /* padding:1rem; */
 }
 .blog__article-image img{
@@ -436,6 +438,89 @@ height: 575px; */
 
 .blog__article-readmore a:hover,.blog__article-author a:hover{
   text-decoration: underline;
+}
+
+
+
+/* Contact Me Section Styling */
+.contact{
+  background:var(--light-dark-color);
+  width:100vw;
+}
+.contact-form {
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  padding: 20px;
+  width:100%;
+  height:100%;
+  max-width: 600px;
+  margin:0 auto;
+}
+
+
+.contact-form  input{
+  border:none;
+  outline:none;
+}
+/* input::placeholder{
+  color:var(--dark-color);
+  font-size:20px;
+  padding:.8rem;
+} */
+.contact-form h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-group textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-form {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px;
+  }
+
+  button[type="submit"] {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
 }
 
 
