@@ -111,8 +111,9 @@ clip-path: polygon(100% 0, 100% 100%, 80% 90%, 0 100%, 0 0);
   color: var(--pure-color);
 }
 
-.header-right span {
-  font-size: 36px;
+
+.header--hero-title{
+ font-size: 36px;
 }
 
 .header-right h2 {
