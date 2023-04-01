@@ -5,6 +5,7 @@
   --primary-color: #37bc6c;
   --pure-color: #ffffff;
   --dark-color: #040441;
+  --light-gray-color:#c7c7c7; 
   --light-dark-color: #284353;
   --accent-color: #ff4a81;
   --secondary-color: #fb7b33;
@@ -174,7 +175,7 @@ html {
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
-  padding:1.3rem;
+  padding: 1.3rem;
 }
 
 .about--image {
@@ -227,13 +228,13 @@ height: 575px; */
 
 /* Stlying My Skills Section */
 .skills {
-  padding-top:1rem;
+  padding-top: 1rem;
   background-color: var(--light-dark-color);
   color: var(--pure-color);
   clip-path: polygon(80% 7%, 100% 0, 100% 100%, 0 100%, 0 0);
 }
-.skills--title{
-  margin-top:2rem;
+.skills--title {
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 .skills--title .title {
@@ -272,7 +273,7 @@ height: 575px; */
   flex: calc(33.33% - 20px);
   margin-bottom: 20px;
   padding: 2rem;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .skills--card_title {
@@ -302,13 +303,52 @@ height: 575px; */
   left: 50%;
   transform: translateX(-50%);
 }
-.skills--card:hover{
+.skills--card:hover {
   background-color: var(--secondary-color);
-  color:var(--pure-color);
+  color: var(--pure-color);
   /* box-shadow: 10px 0 20px rgba(0,0,0,0.3); */
   /* filter: blur(1px); */
 }
 
+/* My Projects Styling */
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
 
+.projects--title {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 72px;
 
-/* My  */
+  color: var(--dark-color);
+}
+
+.projects--project_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects--project_card img {
+  width: 593px;
+  height: 270px;
+}
+.project__dots--slider{
+  display:flex;
+  gap:.4rem;
+}
+.projects .project__dots--slider > *{
+  /* display:flex; */
+  background-color:var(--light-gray-color);
+  width:20px;
+  flex-direction: row;
+  height:20px;
+  border-radius:50%;
+}
+.project__dots--slider > span:nth-child(1){
+  background:var(--light-dark-color);
+}
