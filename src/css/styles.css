@@ -35,7 +35,7 @@ html {
 
 .header-container {
   background-color: hsla(240, 50%, 21%, 1);
-  clip-path: polygon(100% 0, 100% 100%, 79% 81%, 0 99%, 0 0);
+clip-path: polygon(100% 0, 100% 100%, 80% 90%, 0 100%, 0 0);
 }
 
 .navbar {
@@ -65,10 +65,17 @@ html {
 .navbar--links a {
   color: var(--pure-color);
   text-decoration: none;
+  padding:.4rem;
   text-transform: uppercase;
   transition: all 0.5s ease-in-out;
 }
 
+.navbar--links a:hover {
+  color: var(--dark-color);
+  padding:.7rem;
+  text-decoration: 2px underline var(--accent-color);
+  background-color:var(--primary-color);
+}
 .navbar--contact button.navbar--contact_btn {
   text-transform: uppercase;
   background-color: var(--primary-color);
@@ -81,9 +88,6 @@ html {
   cursor: pointer;
 }
 
-.navbar--links a:hover {
-  color: var(--accent-color);
-}
 
 
 .header--hero {
@@ -94,8 +98,10 @@ html {
 }
 
 .header--left .header--hero_image img {
-  width: 419px;
-  height: 595px;
+  max-width:100%;
+  object-fit:cover;
+  /* height: 595px; */
+  height:auto;
   border-radius: 30%;
   display: block;
   margin-top: -40px;
@@ -141,11 +147,10 @@ html {
 #btn-contact a{
   display: block;
   text-align: center;
-  /* margin-top: 10px; */
   text-align: center;
    padding:1rem;
    text-decoration: none;
-  background-image: var(--bg-gradient);
+  background: var(--secondary-color);
   color:var(--pure-color);
   transition: all .4s ease-out;
 
